@@ -1,2 +1,4 @@
 helm: 
- replicaCount: 3
+  parameters:
+  - name: "replicaCount"
+    value: 3
