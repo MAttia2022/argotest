@@ -1,0 +1,6 @@
+helm: 
+  parameters:
+  - name: "image.tag"
+    value: "1.14"
+  - name: "nameOverride"
+    value: "testhelmapp2"

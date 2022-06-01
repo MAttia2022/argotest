@@ -1,4 +1,10 @@
  
-parameters:
+directory:
   - name: "image"
     value: "nginx"
+helm: 
+  parameters:
+  - name: "replicaCount"
+    value: "2"
+  - name: "image.tag"
+    value: "1.14"
