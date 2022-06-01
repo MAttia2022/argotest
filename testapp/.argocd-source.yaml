@@ -1,0 +1,4 @@
+ 
+parameters:
+  - name: "image"
+    value: "nginx"
