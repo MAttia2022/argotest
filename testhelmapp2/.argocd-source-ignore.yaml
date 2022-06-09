@@ -1,0 +1,15 @@
+helm: 
+  parameters:
+  - name: "image.tag"
+    value: "1.14"
+  - name: "nameOverride"
+    value: "testhelmapp2"
+
+ spec:
+      version: v1.0
+      init:
+        command: [sh, -c]
+        args: ["dotnet Vonage.Kubernetes.Runtime.Config.dll"]
+      generate:
+        command: [sh, -c]
+        args: ["helm template --release-name release-name ."]
