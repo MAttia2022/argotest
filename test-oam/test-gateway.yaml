@@ -1,0 +1,39 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: hellok8s
+  namespace: default
+spec:
+  components:
+    - name: hellok8s
+      type: webservice
+      properties:
+        image: vcr.dev.enable.vcp.vonage.cloud/vonage/hellok8s:2.3.6
+        ports:
+          - port: 80
+      traits:
+        - type: gateway
+          properties:
+            #check backward compatability, expose one domain with two paths routing to the SAME port or different ports.
+#            domain: hello.dev.enable.vcp.vonage.cloud
+#            http:
+#              "/bar": 80
+#              "/foo": 80
+            #expose multiple domains with the same or different paths mapping.
+            domains:
+            - domain: hello.dev.enable.vcp.vonage.cloud
+              http:
+                "/foo": 80
+                "/bar": 80
+            - domain: hello.qae.enable.vcp.vonage.cloud.hello.dev.enable.vcp.vonage
+              http:
+                "/foo": 80
+                "/bar": 80
+# if the two domains have different crts use this configuration.
+#            tls:
+#            - hosts:
+#               - hello.dev.enable.vcp.vonage.cloud
+#              secretName: "hello.dev"
+#            - hosts:
+#                - hello.qae.enable.vcp.vonage.cloud
+#              secretName: "hello.qae"
