@@ -8,7 +8,7 @@ spec:
     - name: hellok8s
       type: webservice
       properties:
-        image: vcr.dev.enable.vcp.vonage.cloud/vonage/hellok8s:2.3.6
+        image: busybox
         ports:
           - port: 80
       traits:
@@ -25,7 +25,7 @@ spec:
               http:
                 "/foo": 80
                 "/bar": 80
-            - domain: hello.qae.enable.vcp.vonage.cloud.hello.dev.enable.vcp.vonage
+            - domain: hello.qae.enable.vcp.vonage.cloud.hello.dev.enable.vcp.vonage.cloud
               http:
                 "/foo": 80
                 "/bar": 80
