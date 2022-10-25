@@ -20,7 +20,7 @@ spec:
             configMaps:
               - name: "test-cm"
                 data:
-                  MY_KEY: "MY_VALUE_4"
+                  MY_KEY: "MY_VALUE_5"
         - type: patchoutputs
           properties:
             component:
