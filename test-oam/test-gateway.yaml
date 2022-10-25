@@ -26,5 +26,5 @@ spec:
             component:
               metadata:
                 annotations:
-                  reloader.stakater.com/auto: "true"
+                  configmap.reloader.stakater.com/reload: "test-cm"
                   
