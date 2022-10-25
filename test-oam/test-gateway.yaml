@@ -12,7 +12,7 @@ spec:
         ports:
           - port: 80
         annotations:
-          configmap.reloader.stakater.com/reload: "test-cm"
+          configmap.reloader.stakater.com/reload: "test-cm,test-cm-2"
         cmd:
           - sleep
           - "3600"
