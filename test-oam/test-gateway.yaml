@@ -7,10 +7,10 @@ spec:
   components:
     - name: hellok8s
       type: webservice
-      annotations:
-        reloader.stakater.com/auto: "true"
       properties:
         image: busybox
+        annotations:
+          reloader.stakater.com/auto: "true"
         ports:
           - port: 80
         cmd:
