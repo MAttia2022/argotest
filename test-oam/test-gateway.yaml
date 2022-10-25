@@ -17,9 +17,10 @@ spec:
       traits:
         - type: envfrom
           properties:
-            configMap:
-              data:
-                name: Muhammad
+            configMaps:
+              - data:
+                  name: Muhammad
+                name: myconfigMap 
         - type: gateway
           properties:
             #check backward compatability, expose one domain with two paths routing to the SAME port or different ports.
