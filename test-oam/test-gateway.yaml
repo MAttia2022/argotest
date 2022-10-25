@@ -9,8 +9,6 @@ spec:
       type: webservice
       properties:
         image: busybox
-        annotations:
-          reloader.stakater.com/auto: "true"
         ports:
           - port: 80
         cmd:
@@ -23,3 +21,10 @@ spec:
               - name: "test-cm"
                 data:
                   MY_KEY: "MY_VALUE_4"
+        - type: patchoutputs
+          properties:
+            component:
+              metadata:
+                annotations:
+                  reloader.stakater.com/auto: "true"
+                  
