@@ -11,7 +11,15 @@ spec:
         image: busybox
         ports:
           - port: 80
+        cmd:
+          - sleep
+          - "3600"
       traits:
+        - type: envfrom
+          properties:
+            configMap:
+              data:
+                name: Muhammad
         - type: gateway
           properties:
             #check backward compatability, expose one domain with two paths routing to the SAME port or different ports.
@@ -22,10 +30,6 @@ spec:
             #expose multiple domains with the same or different paths mapping.
             domains:
             - domain: hello.dev.enable.vcp.vonage.cloud
-              http:
-                "/foo": 80
-                "/bar": 80
-            - domain: hello.qae.enable.vcp.vonage.cloud.hello.dev.enable.vcp.vonage.cloud
               http:
                 "/foo": 80
                 "/bar": 80
