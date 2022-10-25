@@ -20,4 +20,4 @@ spec:
             configMaps:
               - name: "test-cm"
                 data:
-                  MY_KEY: "MY_VALUE"
+                  MY_KEY: "MY_VALUE_2"
