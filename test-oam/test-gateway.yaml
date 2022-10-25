@@ -25,7 +25,7 @@ spec:
                   MY_KEY: "MY_VALUE_12"
               - name: "test-cm-2"
                 data:
-                  MY_KEY_2: "MY_VALUE_2"
+                  MY_KEY_2: "MY_VALUE_3"
 #         - type: patchoutputs
 #           properties:
 #             component:
